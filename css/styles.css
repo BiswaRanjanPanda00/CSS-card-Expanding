@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    font-family: 'PT Sans', sans-serif;
+}
+
+/* PANEL STYLING */
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    height: max-content;
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+    margin-top: 20px;
+}
+
+.panel {
+    height: 95vh;
+    background-image: linear-gradient(to bottom,#888, #666, #333 , #111);
+    color: aliceblue;
+    border-radius: 50px;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 5px;
+    position: relative;
+    transition: 0.7s ease-in;
+
+}
+
+.panel h3 {
+    font-size: 20px;
+    position: absolute;
+    top: 250px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+
+}
+
+.panel h2 {
+    font-size: 24px;
+    position: absolute;
+    top: 150px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panel.active h3 {
+    opacity: 1;
+}
+
+.panel.active h2 {
+    opacity: 1;
+}
+
+
+@media (max-width: 616px) 
+{
+    .container {
+        width: 100vw;
+    }    
+
+    .panel:nth-of-type(7),
+    .panel:nth-of-type(8),
+    .panel:nth-of-type(9),
+    .panel:nth-of-type(10) {
+
+        display: none;
+    }
+
+      
+}
